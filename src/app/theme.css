@@ -1,0 +1,52 @@
+:root {
+  /* Light Theme */
+  --light-primary-color: #1f78ff;
+  --light-primary-text-color: #000000;
+  --light-secondary-text-color: #839abe;
+  --light-input-stroke-color: #b8c3d4;
+  --light-primary-bg-color: #f2f5fa;
+  --light-secondary-bg-color: #ffffff;
+  --light-success-bg-color: #e3ffed;
+  --light-success-text-color: #18be50;
+  --light-danger-bg-color: #ff5353;
+  --light-option-bg-color: #ecf4ff;
+
+  /* Dark Theme */
+
+  --dark-primary-color: #1f78ff;
+  --dark-primary-text-color: #ffffff;
+  --dark-secondary-text-color: #839abe;
+  --dark-input-stroke-color: #323740;
+  --dark-primary-bg-color: #0f1011;
+  --dark-secondary-bg-color: #15171a;
+  --dark-success-bg-color: #39e175;
+  --dark-success-text-color: #000000;
+  --dark-danger-bg-color: #ff5353;
+  --dark-option-bg-color: #1e242f;
+}
+
+html.light {
+  --primary-color: var(--light-primary-color);
+  --primary-text-color: var(--light-primary-text-color);
+  --secondary-text-color: var(--light-secondary-text-color);
+  --input-stroke-color: var(--light-input-stroke-color);
+  --primary-bg-color: var(--light-primary-bg-color);
+  --secondary-bg-color: var(--light-secondary-bg-color);
+  --success-bg-color: var(--light-success-bg-color);
+  --success-text-color: var(--light-success-text-color);
+  --danger-bg-color: var(--light-danger-bg-color);
+  --option-bg-color: var(--light-option-bg-color);
+}
+
+html.dark {
+  --primary-color: var(--dark-primary-color);
+  --primary-text-color: var(--dark-primary-text-color);
+  --secondary-text-color: var(--dark-secondary-text-color);
+  --input-stroke-color: var(--dark-input-stroke-color);
+  --primary-bg-color: var(--dark-primary-bg-color);
+  --secondary-bg-color: var(--dark-secondary-bg-color);
+  --success-bg-color: var(--dark-success-bg-color);
+  --success-text-color: var(--dark-success-text-color);
+  --danger-bg-color: var(--dark-danger-bg-color);
+  --option-bg-color: var(--dark-option-bg-color);
+}
