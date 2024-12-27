@@ -34,6 +34,20 @@ export const options = [
     label: "Sales",
     Icon: SalesIcon,
     path: "/sales",
+    children: [
+      {
+        label: "Products",
+        path: "/products",
+      },
+      {
+        label: "Categories",
+        path: "/categories",
+      },
+      {
+        label: "Invoices",
+        path: "/invoices",
+      },
+    ],
   },
   {
     label: "Team",

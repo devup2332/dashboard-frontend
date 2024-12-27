@@ -12,6 +12,10 @@
 button {
   outline: none;
 }
+
+body {
+  background-color: var(--primary-bg-color);
+}
 @layer base {
   :root {
     --background: 0 0% 100%;
