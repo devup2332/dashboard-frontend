@@ -5,67 +5,54 @@ import ReportsIcon from "@/components/Icons/ReportsIcon";
 import SalesIcon from "@/components/Icons/SalesIcon";
 import SettingsIcon from "@/components/Icons/SettingsIcon";
 import TeamIcon from "@/components/Icons/TeamIcon";
+
 export const options = [
   {
-    label: "Dashboard",
+    label: "home.sidebar.menu.dashboard.label",
     Icon: DashboardIcon,
     path: "/dashboard",
   },
   {
-    label: "Inventary",
+    label: "home.sidebar.menu.inventary.label",
     Icon: InvectaryIcon,
     path: "/inventary",
     children: [
       {
-        label: "Products",
+        label: "home.sidebar.menu.inventary.children.products",
         path: "/products",
       },
       {
-        label: "Categories",
+        label: "home.sidebar.menu.inventary.children.categories",
         path: "/categories",
       },
       {
-        label: "Invoices",
+        label: "home.sidebar.menu.inventary.children.invoices",
         path: "/invoices",
       },
     ],
   },
   {
-    label: "Sales",
+    label: "home.sidebar.menu.sales.label",
     Icon: SalesIcon,
     path: "/sales",
-    children: [
-      {
-        label: "Products",
-        path: "/products",
-      },
-      {
-        label: "Categories",
-        path: "/categories",
-      },
-      {
-        label: "Invoices",
-        path: "/invoices",
-      },
-    ],
   },
   {
-    label: "Team",
+    label: "home.sidebar.menu.team.label",
     Icon: TeamIcon,
     path: "/team",
   },
   {
-    label: "Settings",
+    label: "home.sidebar.menu.settings.label",
     Icon: SettingsIcon,
     path: "/settings",
   },
   {
-    label: "Reports",
+    label: "home.sidebar.menu.reports.label",
     Icon: ReportsIcon,
     path: "/reports",
   },
   {
-    label: "Profile",
+    label: "home.sidebar.menu.profile.label",
     Icon: ProfileIcon,
     path: "/profile",
   },

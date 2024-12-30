@@ -1,0 +1,52 @@
+{
+  "home": {
+    "sidebar": {
+      "header": {
+        "title": "Growing Up",
+        "subtitle": "Sales app administrator"
+      },
+      "menu": {
+        "dashboard": {
+          "label": "Dashboard"
+        },
+        "inventary": {
+          "label": "Inventary",
+          "children": {
+            "products": "Products",
+            "categories": "Categories",
+            "invoices": "Invoices"
+          }
+        },
+        "sales": {
+          "label": "Sales"
+        },
+        "team": {
+          "label": "Team"
+        },
+        "settings": {
+          "label": "Settings"
+        },
+        "reports": {
+          "label": "Reports"
+        },
+        "profile": {
+          "label": "Profile"
+        }
+      }
+    },
+    "header": {
+      "greeting": "Good Morning ",
+      "search": {
+        "placeholder": "Seach a product"
+      }
+    },
+    "pages": {
+      "dashboard": {
+        "sales": {
+          "title": "Sales per month",
+          "subtitle": "A graph that shows you a summary of all your sales"
+        }
+      }
+    }
+  }
+}

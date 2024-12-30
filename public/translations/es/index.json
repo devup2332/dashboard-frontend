@@ -1,0 +1,52 @@
+{
+  "home": {
+    "sidebar": {
+      "header": {
+        "title": "Growing Up",
+        "subtitle": "Administrador de ventas"
+      },
+      "menu": {
+        "dashboard": {
+          "label": "Dashboard"
+        },
+        "inventary": {
+          "label": "Inventario",
+          "children": {
+            "products": "Productos",
+            "categories": "Categorias",
+            "invoices": "Facturas"
+          }
+        },
+        "sales": {
+          "label": "Ventas"
+        },
+        "team": {
+          "label": "Equipo"
+        },
+        "settings": {
+          "label": "Configuración"
+        },
+        "reports": {
+          "label": "Reportes"
+        },
+        "profile": {
+          "label": "Perfil"
+        }
+      }
+    },
+    "header": {
+      "greeting": "Buenos días ",
+      "search": {
+        "placeholder": "Buscar un producto"
+      }
+    },
+    "pages": {
+      "dashboard": {
+        "sales": {
+          "title": "Ventas por mes",
+          "subtitle": "Un gráfico que te muestra un resumen de todas tus ventas"
+        }
+      }
+    }
+  }
+}

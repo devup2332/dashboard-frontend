@@ -6,8 +6,9 @@ interface ThemStore {
 }
 
 interface SidebarStore {
-  isOpen: boolean;
+  isOpen: boolean | null;
   toggleSidebar: () => void;
+  setSideBarOpen: (open: boolean) => void;
 }
 
 export const useThemeStore = create<ThemStore>((set) => ({
@@ -23,9 +24,11 @@ export const useThemeStore = create<ThemStore>((set) => ({
 }));
 
 export const useSidebarStore = create<SidebarStore>((set) => ({
-  isOpen: true,
+  isOpen: null,
   toggleSidebar: () =>
     set((state) => {
+      localStorage.setItem("sideBarOpen", JSON.stringify(!state.isOpen));
       return { isOpen: !state.isOpen };
     }),
+  setSideBarOpen: (open) => set(() => ({ isOpen: open })),
 }));

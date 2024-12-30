@@ -8,11 +8,11 @@ interface Props {
 
 const layout: React.FC<Props> = ({ children }) => {
   return (
-    <div className="flex">
+    <div className="p-4 gap-4 flex max-w-[2500px] mx-auto h-screen">
       <Sidebar />
-      <div className="p-4 flex-1 flex flex-col text-white gap-4 max-w-[2000px] mx-auto">
+      <div className="flex flex-col text-white gap-4 flex-1">
         <Header />
-        <div className="py-8 px-12 rounded-md bg-secondary-bg-color flex-1 text-primary-text-color transition-colors">
+        <div className="py-8 px-8 rounded-md bg-secondary-bg-color text-primary-text-color transition-colors overflow-y-auto customScroll h-[calc(100vh-120px)]">
           {children}
         </div>
       </div>

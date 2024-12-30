@@ -16,6 +16,12 @@ button {
 body {
   background-color: var(--primary-bg-color);
 }
+
+.customScroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--input-stroke-color) var(--secondary-bg-color);
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

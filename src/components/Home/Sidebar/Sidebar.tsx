@@ -7,21 +7,23 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 import SidebarMultipleChildren from "../SidebarMultipleChildren/SidebarMultipleChildren";
+import { useTranslation } from "react-i18next";
 
 const Sidebar = () => {
   const path = usePathname();
   const router = useRouter();
+  const { t } = useTranslation();
   const isOpen = useSidebarStore((state) => state.isOpen);
   return (
     <div
       className={cn(
-        "bg-secondary-bg-color px-2 py-9 top-0 left-0 h-screen transition-all overflow-x-hidden",
+        "bg-secondary-bg-color px-2 py-9 top-0 left-0 h-full transition-all overflow-x-hidden customScroll sticky rounded-md",
         isOpen ? "w-[284px]" : "w-[80px]",
       )}
     >
       <Link
         href="/dashboard"
-        className="flex gap-6 px-6 w-[268px] cursor-pointer"
+        className="flex gap-7 px-5 w-[268px] cursor-pointer"
       >
         <div className="w-6 h-6">
           <MainLogoIcon className="mt-1 text-primary-color stroke-current w-full h-full" />
@@ -31,7 +33,7 @@ const Sidebar = () => {
             Growing Up
           </h1>
           <p className="text-xs text-secondary-text-color">
-            Sales app administrator
+            {t("home.sidebar.header.subtitle")}
           </p>
         </div>
       </Link>
@@ -45,7 +47,7 @@ const Sidebar = () => {
               key={index}
               onClick={() => router.push(opt.path)}
               className={cn(
-                "flex py-3 px-3 rounded-md gap-6 cursor-pointer group h-12 overflow-y-hidden transition-all",
+                "flex py-3 px-2 rounded-md gap-7 cursor-pointer group h-12 overflow-y-hidden transition-all",
                 path === opt.path ? "bg-option-bg-color" : "",
               )}
             >
@@ -67,7 +69,7 @@ const Sidebar = () => {
                   "group-hover:text-primary-text-color transition-colors text-sm select-none",
                 )}
               >
-                {opt.label}
+                {t(opt.label)}
               </p>
             </div>
           );

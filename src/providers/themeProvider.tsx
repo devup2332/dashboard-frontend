@@ -1,5 +1,5 @@
 "use client";
-import { useThemeStore } from "@/store";
+import { useSidebarStore, useThemeStore } from "@/store";
 import React, { useEffect } from "react";
 
 interface Props {
@@ -8,6 +8,7 @@ interface Props {
 
 const ThemeProvider: React.FC<Props> = ({ children }) => {
   const { theme, setTheme } = useThemeStore((state) => state);
+  const { setSideBarOpen } = useSidebarStore((state) => state);
 
   const changeTheme = (theme: "dark" | "light") => {
     const html = document.querySelector("html");
@@ -17,7 +18,15 @@ const ThemeProvider: React.FC<Props> = ({ children }) => {
     html?.classList.add(theme);
   };
 
+  const setSideBar = () => {
+    const openSideBar = localStorage.getItem("sideBarOpen")
+      ? localStorage.getItem("sideBarOpen") === "true"
+      : true;
+    setSideBarOpen(openSideBar);
+  };
+
   useEffect(() => {
+    setSideBar();
     const localTheme = localStorage.getItem("theme");
     if (!localTheme) {
       const OSDarkTheme = window.matchMedia(

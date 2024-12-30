@@ -36,6 +36,7 @@ html.light {
   --success-text-color: var(--light-success-text-color);
   --danger-bg-color: var(--light-danger-bg-color);
   --option-bg-color: var(--light-option-bg-color);
+  color-scheme: light;
 }
 
 html.dark {
@@ -49,4 +50,5 @@ html.dark {
   --success-text-color: var(--dark-success-text-color);
   --danger-bg-color: var(--dark-danger-bg-color);
   --option-bg-color: var(--dark-option-bg-color);
+  color-scheme: dark;
 }

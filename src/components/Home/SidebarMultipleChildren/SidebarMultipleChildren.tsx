@@ -4,6 +4,7 @@ import { useSidebarStore } from "@/store";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 interface Props {
   opt: {
@@ -18,6 +19,7 @@ interface Props {
 }
 
 const SidebarMultipleChildren = ({ opt }: Props) => {
+  const { t } = useTranslation();
   const children = opt.children.map((child) => ({
     ...child,
     path: `${opt.path}${child.path}`,
@@ -27,13 +29,7 @@ const SidebarMultipleChildren = ({ opt }: Props) => {
   const router = useRouter();
   const [isOpenOption, setIsOpenOption] = useState(false);
   const parentSelected = children.find((child) => path === child.path);
-  const size = opt.children?.length * 40 + 20;
-  console.log({
-    parentSelected,
-    path,
-    isOpen,
-    isOpenOption,
-  });
+  const size = opt.children?.length * 44 + 54;
 
   const toggleOptions = () => {
     router.push(`${children[0].path}`);
@@ -56,10 +52,10 @@ const SidebarMultipleChildren = ({ opt }: Props) => {
       <div
         onClick={toggleOptions}
         className={cn(
-          "flex justify-between items-center py-3 px-3 cursor-pointer overflow-y-hidden transition-all group",
+          "flex justify-between items-center py-3 px-2 cursor-pointer overflow-y-hidden transition-all group",
         )}
       >
-        <div className="flex gap-6 items-center">
+        <div className="flex gap-7 items-center">
           <opt.Icon
             className={cn(
               "text-secondary-text-color stroke-current w-6 h-6 group-hover:text-primary-text-color",
@@ -72,7 +68,7 @@ const SidebarMultipleChildren = ({ opt }: Props) => {
               parentSelected && "text-primary-color font-bold",
             )}
           >
-            {opt.label}
+            {t(opt.label)}
           </p>
         </div>
         <ArrowRightIcon
@@ -85,7 +81,7 @@ const SidebarMultipleChildren = ({ opt }: Props) => {
       </div>
 
       {children && (
-        <div className="flex flex-col gap-2 pl-6 ml-6 pr-4 border-l-2 border-solid border-primary-color">
+        <div className="flex flex-col gap-2 pl-6 ml-6 pr-4 border-l-2 border-secondary-text-color">
           {children.map((child, index) => {
             return (
               <Link
@@ -97,7 +93,7 @@ const SidebarMultipleChildren = ({ opt }: Props) => {
                     "text-primary-text-color font-semibold",
                 )}
               >
-                {child.label}
+                {t(child.label)}
               </Link>
             );
           })}
