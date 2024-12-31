@@ -45,6 +45,21 @@
         "sales": {
           "title": "Ventas por mes",
           "subtitle": "Un gráfico que te muestra un resumen de todas tus ventas"
+        },
+        "lastItemsAdded": {
+          "title": "Últimos items agregados",
+          "subtitle": "Una lista de los últimos items agregados al inventario",
+          "seeAll": "Ver todos",
+          "table": {
+            "columns": {
+              "name": "Nombre",
+              "price": "Precio",
+              "status": "Estado",
+              "createdAt": "Creado hace",
+              "category": "Categoría",
+              "actions": "Actions"
+            }
+          }
         }
       }
     }

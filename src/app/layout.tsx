@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
-import "./globals.css";
+// Providers
 import ThemeProvider from "@/providers/themeProvider";
-import { cn } from "@/utils/tailwind";
+import { NextUIProvider } from "@nextui-org/system";
 import TranslationProvider from "@/providers/translationProvider";
+import { cn } from "@/utils/tailwind";
+
+import "./globals.css";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -21,16 +24,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-primary-bg-color transition-colors">
       <body
         className={cn(
           "bg-primary-bg-color transition-colors",
           raleway.variable,
         )}
       >
-        <TranslationProvider>
-          <ThemeProvider>{children}</ThemeProvider>
-        </TranslationProvider>
+        <NextUIProvider>
+          <TranslationProvider>
+            <ThemeProvider>{children}</ThemeProvider>
+          </TranslationProvider>
+        </NextUIProvider>
       </body>
     </html>
   );

@@ -63,7 +63,7 @@ const chartConfig = {} satisfies ChartConfig;
 const CustomAreaChart = () => {
   return (
     <div>
-      <ChartContainer config={chartConfig} className="h-[400px] w-full">
+      <ChartContainer config={chartConfig} className="h-[355px] w-full">
         <BarChart data={data}>
           <YAxis dataKey="sales" fontSize={12} />
           <XAxis dataKey="name" fontSize={12} />

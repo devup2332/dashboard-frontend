@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { nextui } from "@nextui-org/theme";
 import twAnimate from "tailwindcss-animate";
 
 export default {
@@ -7,6 +8,7 @@ export default {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@nextui-org/theme/dist/components/(table|checkbox|form|spacer).js"
   ],
   theme: {
     extend: {
@@ -72,5 +74,5 @@ export default {
       },
     },
   },
-  plugins: [twAnimate],
+  plugins: [nextui(), twAnimate],
 } satisfies Config;

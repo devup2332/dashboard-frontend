@@ -45,6 +45,21 @@
         "sales": {
           "title": "Sales per month",
           "subtitle": "A graph that shows you a summary of all your sales"
+        },
+        "lastItemsAdded": {
+          "title": "Last items added",
+          "subtitle": "A list of the last items added to the inventary",
+          "seeAll": "See all",
+          "table": {
+            "columns": {
+              "name": "Name",
+              "price": "Price",
+              "status": "Status",
+              "createdAt": "Created at",
+              "category": "Category",
+              "actions": "Actions"
+            }
+          }
         }
       }
     }
