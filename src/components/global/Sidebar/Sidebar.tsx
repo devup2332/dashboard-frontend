@@ -18,12 +18,12 @@ const Sidebar = () => {
     <div
       className={cn(
         "bg-secondary-bg-color px-2 py-9 top-0 left-0 h-full overflow-x-hidden customScroll sticky rounded-md transition-all",
-        isOpen ? "w-[284px]" : "w-[80px]",
+        isOpen ? "w-[284px]" : "w-[72px]",
       )}
     >
       <Link
         href="/dashboard"
-        className="flex gap-7 px-5 w-[268px] cursor-pointer"
+        className="flex gap-6 px-4 w-[268px] cursor-pointer"
       >
         <div className="w-6 h-6">
           <MainLogoIcon className="mt-1 text-primary-color stroke-current w-full h-full" />
@@ -38,7 +38,7 @@ const Sidebar = () => {
         </div>
       </Link>
 
-      <section className="px-3 mt-14 w-[274px]">
+      <section className="px-0 mt-14 w-[268px]">
         {options.map((opt, index) => {
           return opt.children ? (
             <SidebarMultipleChildren opt={opt} key={index} />
@@ -47,7 +47,7 @@ const Sidebar = () => {
               key={index}
               onClick={() => router.push(opt.path)}
               className={cn(
-                "flex py-3 px-2 rounded-md gap-7 cursor-pointer group h-12 overflow-y-hidden",
+                "flex py-3 px-4 rounded-md gap-6 cursor-pointer group h-12 overflow-y-hidden",
                 path === opt.path ? "bg-option-bg-color" : "",
               )}
             >

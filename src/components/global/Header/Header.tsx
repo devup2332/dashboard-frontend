@@ -42,6 +42,7 @@ const Header = () => {
           Icon={
             <SearchIcon className="text-secondary-text-color stroke-current w-6 h-6" />
           }
+          className="placeholder:text-secondary-text-color placeholder:font-medium"
           placeholder={t("home.header.search.placeholder")}
         />
         <button

@@ -22,12 +22,12 @@ export const options = [
         path: "/products",
       },
       {
-        label: "home.sidebar.menu.inventary.children.categories",
-        path: "/categories",
-      },
-      {
         label: "home.sidebar.menu.inventary.children.invoices",
         path: "/invoices",
+      },
+      {
+        label: "home.sidebar.menu.inventary.children.categories",
+        path: "/categories",
       },
     ],
   },

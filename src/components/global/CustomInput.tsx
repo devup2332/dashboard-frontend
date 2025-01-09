@@ -7,7 +7,7 @@ interface Props extends HTMLProps<HTMLInputElement> {
 }
 
 const CustomInput = (props: Props) => {
-  const { Icon, containerClassName, ...others } = props;
+  const { Icon, containerClassName, className, ...others } = props;
   return (
     <div
       className={cn(
@@ -17,7 +17,10 @@ const CustomInput = (props: Props) => {
     >
       {Icon}
       <input
-        className="border-none font-raleway text-primary-text-color bg-transparent outline-none text-sm w-full"
+        className={cn(
+          "border-none font-raleway text-primary-text-color bg-transparent outline-none text-sm w-full",
+          className,
+        )}
         {...others}
       />
     </div>

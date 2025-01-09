@@ -52,10 +52,10 @@ const SidebarMultipleChildren = ({ opt }: Props) => {
       <div
         onClick={toggleOptions}
         className={cn(
-          "flex justify-between items-center py-3 px-2 cursor-pointer overflow-y-hidden group",
+          "flex justify-between items-center py-3 px-4 cursor-pointer overflow-y-hidden group",
         )}
       >
-        <div className="flex gap-7 items-center">
+        <div className="flex gap-6 items-center">
           <opt.Icon
             className={cn(
               "text-secondary-text-color stroke-current w-6 h-6 group-hover:text-primary-text-color",
@@ -81,7 +81,7 @@ const SidebarMultipleChildren = ({ opt }: Props) => {
       </div>
 
       {children && (
-        <div className="flex flex-col gap-2 pl-6 ml-6 pr-4 border-l-2 border-secondary-text-color">
+        <div className="flex flex-col gap-2 pl-5 ml-7 pr-4 border-l-2 border-secondary-text-color">
           {children.map((child, index) => {
             return (
               <Link
