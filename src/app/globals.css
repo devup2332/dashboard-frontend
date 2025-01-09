@@ -15,6 +15,7 @@ button {
 
 body {
   background-color: var(--primary-bg-color);
+  transition: background-color 250ms ease;
 }
 
 .customScroll {

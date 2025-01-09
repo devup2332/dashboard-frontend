@@ -12,6 +12,7 @@ import moment from "moment";
 import { cn } from "@/lib/utils";
 import EyeIcon from "@/components/Icons/EyeIcon";
 import { useTranslation } from "react-i18next";
+import { Button } from "@/components/ui/button";
 
 const DashboardTable = () => {
   const { t } = useTranslation();
@@ -19,9 +20,10 @@ const DashboardTable = () => {
     <Table
       aria-label="Example static collection table"
       classNames={{
+        table: "",
         wrapper:
-          "bg-secondary-bg-color elevation-0 border-none shadow-none font-raleway transition-colors",
-        th: "bg-seconadry-bg-color text-primary-text-color text-sm  font-bold",
+          "bg-transparent elevation-0 border-none shadow-none font-raleway",
+        th: "bg-transparent text-primary-text-color text-sm font-bold",
         tr: "text-sm",
         td: "py-[20px]",
       }}
@@ -67,9 +69,9 @@ const DashboardTable = () => {
             <TableCell>{moment(item.created_at).fromNow()}</TableCell>
             <TableCell>{item.category}</TableCell>
             <TableCell>
-              <button className="cursor-pointer px-2">
+              <Button variant="ghost" className="cursor-pointer px-2">
                 <EyeIcon className="text-secondary-text-color stroke-current w-6 h-6" />
-              </button>
+              </Button>
             </TableCell>
           </TableRow>
         ))}

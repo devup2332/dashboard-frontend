@@ -24,13 +24,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-primary-bg-color transition-colors">
-      <body
-        className={cn(
-          "bg-primary-bg-color transition-colors",
-          raleway.variable,
-        )}
-      >
+    <html lang="en" className={cn("bg-primary-bg-color ", raleway.variable)}>
+      <body>
         <NextUIProvider>
           <TranslationProvider>
             <ThemeProvider>{children}</ThemeProvider>

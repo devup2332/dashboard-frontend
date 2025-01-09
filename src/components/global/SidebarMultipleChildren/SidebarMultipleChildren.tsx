@@ -42,7 +42,7 @@ const SidebarMultipleChildren = ({ opt }: Props) => {
   return (
     <div
       className={cn(
-        "overflow-y-hidden rounded-md transition-all",
+        "overflow-y-hidden rounded-md transition-height",
         parentSelected && "bg-option-bg-color",
       )}
       style={{
@@ -52,7 +52,7 @@ const SidebarMultipleChildren = ({ opt }: Props) => {
       <div
         onClick={toggleOptions}
         className={cn(
-          "flex justify-between items-center py-3 px-2 cursor-pointer overflow-y-hidden transition-all group",
+          "flex justify-between items-center py-3 px-2 cursor-pointer overflow-y-hidden group",
         )}
       >
         <div className="flex gap-7 items-center">
@@ -73,7 +73,7 @@ const SidebarMultipleChildren = ({ opt }: Props) => {
         </div>
         <ArrowRightIcon
           className={cn(
-            "w-6 h-6 stroke-current text-secondary-text-color -rotate-90 transition-all",
+            "w-6 h-6 stroke-current text-secondary-text-color -rotate-90",
             parentSelected && "text-primary-color",
             isOpenOption && "rotate-0",
           )}

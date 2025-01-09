@@ -9,6 +9,11 @@ const nextConfig: NextConfig = {
         destination: "/inventary/products",
         permanent: true,
       },
+      {
+        source: "/",
+        destination: "/dashboard",
+        permanent: true,
+      },
     ];
   },
   images: {

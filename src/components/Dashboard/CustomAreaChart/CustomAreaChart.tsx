@@ -78,7 +78,6 @@ const CustomAreaChart = () => {
             fill="var(--primary-color)"
             radius={[10, 10, 0, 0]}
             barSize={30}
-            animationDuration={500}
             animationEasing="ease-in-out"
           />
         </BarChart>

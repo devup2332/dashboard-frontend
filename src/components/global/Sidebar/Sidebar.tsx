@@ -6,7 +6,7 @@ import { cn } from "@/utils/tailwind";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import React from "react";
-import SidebarMultipleChildren from "../SidebarMultipleChildren/SidebarMultipleChildren";
+import SidebarMultipleChildren from "@/components/global/SidebarMultipleChildren/SidebarMultipleChildren";
 import { useTranslation } from "react-i18next";
 
 const Sidebar = () => {
@@ -17,7 +17,7 @@ const Sidebar = () => {
   return (
     <div
       className={cn(
-        "bg-secondary-bg-color px-2 py-9 top-0 left-0 h-full transition-all overflow-x-hidden customScroll sticky rounded-md",
+        "bg-secondary-bg-color px-2 py-9 top-0 left-0 h-full overflow-x-hidden customScroll sticky rounded-md transition-all",
         isOpen ? "w-[284px]" : "w-[80px]",
       )}
     >
@@ -47,7 +47,7 @@ const Sidebar = () => {
               key={index}
               onClick={() => router.push(opt.path)}
               className={cn(
-                "flex py-3 px-2 rounded-md gap-7 cursor-pointer group h-12 overflow-y-hidden transition-all",
+                "flex py-3 px-2 rounded-md gap-7 cursor-pointer group h-12 overflow-y-hidden",
                 path === opt.path ? "bg-option-bg-color" : "",
               )}
             >
@@ -57,7 +57,7 @@ const Sidebar = () => {
                     path === opt.path
                       ? "text-primary-color stroke-current"
                       : "text-secondary-text-color stroke-current",
-                    "group-hover:text-primary-text-color transition-colors w-full h-full",
+                    "group-hover:text-primary-text-color w-full h-full",
                   )}
                 />
               </div>
@@ -66,7 +66,7 @@ const Sidebar = () => {
                   path === opt.path
                     ? "text-primary-color font-bold"
                     : "text-secondary-text-color font-medium",
-                  "group-hover:text-primary-text-color transition-colors text-sm select-none",
+                  "group-hover:text-primary-text-color text-sm select-none",
                 )}
               >
                 {t(opt.label)}

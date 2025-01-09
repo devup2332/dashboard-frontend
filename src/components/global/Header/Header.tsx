@@ -22,7 +22,7 @@ const Header = () => {
 
   const showNotifications = () => {};
   return (
-    <header className="px-6 items-center h-20 bg-secondary-bg-color transition-colors rounded-xl flex justify-between select-none">
+    <header className="px-6 items-center h-20 bg-secondary-bg-color rounded-xl flex justify-between select-none transition-colors">
       <div className="flex gap-6 items-center">
         <button className="p-2 w-10 h-10" onClick={() => toggleSidebar()}>
           {isOpen ? (

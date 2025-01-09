@@ -1,5 +1,5 @@
-import Header from "@/components/Home/Header/Header";
-import Sidebar from "@/components/Home/Sidebar/Sidebar";
+import Header from "@/components/global/Header/Header";
+import Sidebar from "@/components/global/Sidebar/Sidebar";
 import React from "react";
 
 interface Props {
@@ -12,7 +12,7 @@ const layout: React.FC<Props> = ({ children }) => {
       <Sidebar />
       <div className="flex flex-col text-white gap-4 flex-1">
         <Header />
-        <div className="py-8 px-8 rounded-md bg-secondary-bg-color text-primary-text-color transition-colors overflow-y-auto customScroll h-[calc(100vh-120px)]">
+        <div className="py-8 px-8 rounded-md transition-colors bg-secondary-bg-color text-primary-text-color overflow-y-auto customScroll h-[calc(100vh-120px)]">
           {children}
         </div>
       </div>

@@ -60,6 +60,11 @@
               "actions": "Actions"
             }
           }
+        },
+        "team": {
+          "title": "Your Team",
+          "subtitle": "A list of your team members",
+          "seeAll": "See all"
         }
       }
     }
