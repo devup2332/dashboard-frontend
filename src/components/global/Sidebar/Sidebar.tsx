@@ -1,13 +1,13 @@
 "use client";
 import MainLogoIcon from "@/components/Icons/MainLogoIcon";
 import { useSidebarStore } from "@/store";
-import { options } from "@/utils/sidebar";
-import { cn } from "@/utils/tailwind";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 import SidebarMultipleChildren from "@/components/global/SidebarMultipleChildren/SidebarMultipleChildren";
 import { useTranslation } from "react-i18next";
+import { cn } from "@/lib/utils";
+import { options } from "@/utils/constants/sidebar";
 
 const Sidebar = () => {
   const path = usePathname();

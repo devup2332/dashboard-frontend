@@ -1,11 +1,12 @@
 "use client";
 import CustomAreaChart from "@/components/Dashboard/CustomAreaChart/CustomAreaChart";
 import DashboardTable from "@/components/Dashboard/DashboardTable/DashboardTable";
-import DashboardTeam from "@/components/Dashboard/DashboardTeam/DashboardTeam";
+import TeamCardDashboard from "@/components/Dashboard/DashboardTeam/DashboardTeam";
 import BoxIcon from "@/components/Icons/BoxIcon";
 import BrowserIcon from "@/components/Icons/BrowserIcon";
 import ProfileIcon from "@/components/Icons/ProfileIcon";
 import { Button } from "@/components/ui/button";
+import { teamData } from "@/utils/constants/data";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -74,7 +75,11 @@ const DashboardPage = () => {
             {t("home.pages.dashboard.team.seeAll")}
           </Button>
         </div>
-        <DashboardTeam />
+        <div className="pl-11 grid gap-6">
+          {teamData.map((item) => (
+            <TeamCardDashboard item={item} key={item.id} />
+          ))}
+        </div>
       </div>
     </div>
   );

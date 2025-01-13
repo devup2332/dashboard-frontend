@@ -10,6 +10,7 @@ import BellIcon from "@/components/Icons/BellIcon";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
 import CustomInput from "@/components/global/CustomInput";
+import { Button } from "@/components/ui/button";
 
 const userImage =
   "https://images.unsplash.com/photo-1543610892-0b1f7e6d8ac1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D";
@@ -24,13 +25,17 @@ const Header = () => {
   return (
     <header className="px-6 items-center h-20 bg-secondary-bg-color rounded-xl flex justify-between select-none transition-colors">
       <div className="flex gap-6 items-center">
-        <button className="p-2 w-10 h-10" onClick={() => toggleSidebar()}>
+        <Button
+          variant="ghost"
+          className="p-2 w-10 h-10"
+          onClick={() => toggleSidebar()}
+        >
           {isOpen ? (
             <CloseSidebarIcon className="text-secondary-text-color fill-current" />
           ) : (
             <OpenSidebarIcon className="text-secondary-text-color fill-current" />
           )}
-        </button>
+        </Button>
         <h1 className="text-2xl text-primary-text-color font-normal ">
           {t("home.header.greeting")}
           <span className="font-bold text-primary-color"> Jhon Doe</span>
@@ -38,7 +43,7 @@ const Header = () => {
       </div>
       <div className="flex justify-between grow-1 gap-6 items-center w-3/12 min-w-[526px]">
         <CustomInput
-          containerClassName="w-full"
+          containerClassName="w-full rounded-[10px]"
           Icon={
             <SearchIcon className="text-secondary-text-color stroke-current w-6 h-6" />
           }

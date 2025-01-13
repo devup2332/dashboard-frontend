@@ -7,12 +7,12 @@ import {
   TableRow,
   TableCell,
 } from "@nextui-org/table";
-import { lastItems } from "@/utils/data";
 import moment from "moment";
 import { cn } from "@/lib/utils";
 import EyeIcon from "@/components/Icons/EyeIcon";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
+import { lastItems } from "@/utils/constants/data";
 
 const DashboardTable = () => {
   const { t } = useTranslation();
@@ -25,7 +25,7 @@ const DashboardTable = () => {
           "bg-transparent elevation-0 border-none shadow-none font-raleway",
         th: "bg-transparent text-primary-text-color text-sm font-bold",
         tr: "text-sm",
-        td: "py-[20px]",
+        td: "py-4",
       }}
     >
       <TableHeader className="bg-primary-bg-color ">

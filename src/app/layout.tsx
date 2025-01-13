@@ -4,9 +4,9 @@ import { Raleway } from "next/font/google";
 import ThemeProvider from "@/providers/themeProvider";
 import { NextUIProvider } from "@nextui-org/system";
 import TranslationProvider from "@/providers/translationProvider";
-import { cn } from "@/utils/tailwind";
 
 import "./globals.css";
+import { cn } from "@/lib/utils";
 
 const raleway = Raleway({
   subsets: ["latin"],
